@@ -26,8 +26,8 @@
     checkout: "https://unicv.checkout.cppem.com.br/pay/matricula-unicive-ead-mega-desconto-de-black-friday",
 
     /* Mensalidade de Black Friday: vazia por enquanto (tabela oficial em
-       definição). Preenchida, ex. "R$ 129,90", a linha "Mensalidade de
-       R$ 250 por …" aparece sozinha no cartão da oferta e na ancoragem. */
+       definição), o cartão mostra "R$ ??,??" em segredo. Preenchida, ex.
+       "R$ 129,90", o valor aparece no lugar e o aviso some. */
     mensalidade: "",
 
     /* Restos da página de cadastro, mantidos para o script compartilhado
@@ -151,8 +151,9 @@
     });
 
     if (CONFIG.mensalidade) {
-      $$("[data-mensalidade]").forEach(function (el) { el.hidden = false; });
-      $$("[data-mensalidade-valor]").forEach(function (el) { el.textContent = CONFIG.mensalidade; });
+      $$("[data-mensalidade]").forEach(function (el) { el.classList.remove("is-segredo"); });
+      $$("[data-mensalidade-valor]").forEach(function (el) { el.textContent = CONFIG.mensalidade; el.removeAttribute("aria-label"); });
+      $$("[data-mensalidade-nota]").forEach(function (el) { el.remove(); });
     }
   })();
 

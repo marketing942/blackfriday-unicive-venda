@@ -1456,3 +1456,24 @@ html.is-ultimas-horas .oferta__pulso { background: #ff8a7a; }
   .selo-melhor, .selo-melhor__anel, .selo-melhor__miolo::after, .preco__selo, .preco__selo i { animation: none; }
   .selo-melhor { transform: rotate(8deg); }
 }
+
+/* =========================================================
+   MENSALIDADE EM SEGREDO — "R$ ??,??" até a tabela oficial
+   ========================================================= */
+.preco--mensal { padding-block: .75rem; }
+.preco--mensal.is-segredo .preco__por b {
+  position: relative; filter: blur(.5px);
+  background: linear-gradient(100deg, var(--gold) 20%, #fff3cf 45%, var(--gold-hot) 55%, var(--gold) 80%);
+  background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: segredo-brilho 2.8s linear infinite;
+}
+@keyframes segredo-brilho { from { background-position: 100% 0; } to { background-position: -150% 0; } }
+.mensal__nota {
+  grid-column: 2; grid-row: 2 / span 2; align-self: center; justify-self: end;
+  display: flex; align-items: center; gap: .35rem; max-width: 9.5rem;
+  padding: .35rem .6rem; border-radius: 8px; border: 1px dashed rgba(255, 197, 114, .5);
+  background: rgba(255, 197, 114, .08); color: var(--gold-hot);
+  font-size: .64rem; font-weight: 800; line-height: 1.25; letter-spacing: .04em; text-transform: uppercase;
+}
+.mensal__nota svg { flex: none; width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (prefers-reduced-motion: reduce) { .preco--mensal.is-segredo .preco__por b { animation: none; } }
