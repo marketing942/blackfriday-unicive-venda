@@ -1031,7 +1031,7 @@ html.is-revelado .diploma-fita { animation: fita-cai .75s var(--ease) .1s both; 
 html.is-revelado .selo-card    { animation: sobe .6s var(--freada) 1.6s both; }
 @keyframes desenrola {
   from { clip-path: inset(calc(50% - 9px) -30px calc(50% - 9px) -30px); }
-  to   { clip-path: inset(-30px -30px -30px -30px); }
+  to   { clip-path: inset(-60px -60px -60px -60px); }
 }
 @keyframes canudo-topo { from { top: calc(50% - 18px); } to { top: -9px; } }
 @keyframes canudo-pe   { from { bottom: calc(50% - 18px); } to { bottom: -9px; } }
@@ -1386,7 +1386,7 @@ html.is-ultimas-horas .oferta__pulso { background: #ff8a7a; }
   position: absolute; top: -1.6rem; right: -1.4rem; z-index: 6;
   width: 112px; height: 112px;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .55));
-  animation: selo-entra .9s cubic-bezier(.2, 1.6, .4, 1) .6s both, selo-balanca 5s ease-in-out 1.5s infinite;
+  animation: selo-entra .9s cubic-bezier(.2, 1.6, .4, 1) 1.9s both, selo-balanca 5s ease-in-out 2.8s infinite;
   pointer-events: none;
 }
 .selo-melhor__fitas { position: absolute; left: 50%; top: 62%; width: 70%; transform: translateX(-50%); }
