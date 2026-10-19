@@ -15,8 +15,9 @@
      CONFIG — os únicos valores específicos desta página
      ========================================================= */
   var CONFIG = {
-    /* A OFERTA: de 09/11 (00h00) até 20/11, 23h59. O cronômetro conta até
-       o início antes de 09/11 e até o fim enquanto a oferta está no ar. */
+    /* A OFERTA: de 09/11 até 20/11, 23h59. A página só vai ao ar quando as
+       vendas começam, então o cronômetro conta sempre até o `fim`. O
+       `inicio` fica só como referência (agenda/registro). */
     inicio: "2026-11-09T00:00:00-03:00",
     fim:    "2026-11-20T23:59:59-03:00",
 
@@ -226,10 +227,19 @@
 
   function tique() {
     var agora = Date.now();
-    /* antes: conta até o início; no ar: conta até o fim da oferta */
-    var falta = Math.max(0, (agora < INICIO ? INICIO : FIM) - agora);
+    /* A página só é publicada quando as vendas começam: não existe fase
+       "antes". O cronômetro conta sempre até o FIM da oferta. */
+    var falta = Math.max(0, FIM - agora);
 
-    aplicarFase(agora < INICIO ? "antes" : agora < FIM ? "ao-vivo" : "depois");
+    aplicarFase(agora < FIM ? "ao-vivo" : "depois");
+
+    /* gatilho automático: nas últimas 48h a página passa a gritar "últimas horas" */
+    var ultimas = falta > 0 && falta <= 48 * 3600e3;
+    if (ultimas !== raiz.classList.contains("is-ultimas-horas")) {
+      raiz.classList.toggle("is-ultimas-horas", ultimas);
+      $$("[data-gatilho]").forEach(function (el) { el.textContent = ultimas ? "Últimas horas" : "Última oferta possível"; });
+      $$("[data-chamado]").forEach(function (el) { el.textContent = ultimas ? "Últimas horas! Garanta antes que acabe:" : "Corra! Seu desconto de 85% acaba em:"; });
+    }
 
     var s = Math.floor(falta / 1000);
     var v = {
@@ -246,10 +256,7 @@
     });
 
     var curto = (Number(v.d) ? Number(v.d) + "d " : "") + v.h + ":" + v.m + ":" + v.s;
-    var resumo =
-      faseAtual === "antes"   ? "começa em " + curto :
-      faseAtual === "ao-vivo" ? "termina em " + curto :
-                                "oferta encerrada";
+    var resumo = faseAtual === "ao-vivo" ? "finaliza em " + curto : "oferta encerrada";
     $$("[data-tempo-curto]").forEach(function (el) { el.textContent = curto; });
     if (dockTempo) dockTempo.textContent = resumo;
     if (formTempo) formTempo.textContent = resumo;

@@ -63,8 +63,7 @@
 <!-- ================= TOPBAR ================= -->
 <div class="topbar" role="note">
   <span class="topbar__dot" aria-hidden="true"></span>
-  <span data-fase-so="antes">Black Friday Unicive · <b>começa em 09/11</b><span class="topbar__extra"> · matrícula por R$ 59,90</span></span>
-  <span data-fase-so="ao-vivo" hidden>Black Friday Unicive · <b>termina em <span data-tempo-curto>--</span></b><span class="topbar__extra"> · matrícula por R$ 59,90</span></span>
+  <span data-fase-so="ao-vivo"><b class="topbar__gatilho" data-gatilho>Última oferta possível</b> · finaliza em <b data-tempo-curto>--</b><span class="topbar__extra"> · matrícula por R$ 59,90</span></span>
   <span data-fase-so="depois" hidden>A Black Friday Unicive <b>foi encerrada</b></span>
 </div>
 
@@ -120,14 +119,6 @@
 
       <!-- ---------- coluna do título ---------- -->
       <div class="hero__cena">
-        <span class="alerta anim d1">
-          <i class="alerta__ponto" aria-hidden="true"></i>
-          <b data-fase-so="antes">Começa em 09/11</b>
-          <b data-fase-so="ao-vivo" hidden>Oferta no ar</b>
-          <b data-fase-so="depois" hidden>Oferta encerrada</b>
-          <i class="alerta__sep" aria-hidden="true"></i>
-          <span>Até 20/11 · 23h59</span>
-        </span>
 
         <!-- cada letra é um <i> com --i (ordem de entrada) -->
         <h1 class="bf" aria-label="Black Friday Unicive">
@@ -138,20 +129,35 @@
         <p class="bf__assina anim d1">Unicive <i></i> CPPEM</p>
 
         <p class="hero__sub anim d2">
-          <mark>Matrícula de R$ 399 por R$ 59,90</mark> nos cursos tecnólogos
-          <em>reconhecidos pelo MEC</em>. Só até 20/11.
+          <mark>A melhor e última oferta possível:</mark> matrícula de R$ 399 por
+          R$ 59,90 nos cursos tecnólogos <em>reconhecidos pelo MEC</em>.
         </p>
       </div>
 
       <!-- ---------- coluna da oferta ---------- -->
       <div class="inscricao oferta anim d3" id="oferta">
         <div class="inscricao__card oferta__card">
-          <span class="oferta__tag">Oferta Black Friday</span>
+          <!-- selo "melhor oferta" no canto do cartão -->
+          <div class="selo-melhor" aria-label="Selo: melhor oferta Black Friday">
+            <svg class="selo-melhor__fitas" viewBox="0 0 100 60" aria-hidden="true">
+              <path d="M30 0 L14 56 L26 48 L34 60 L48 6 Z" />
+              <path d="M70 0 L86 56 L74 48 L66 60 L52 6 Z" />
+            </svg>
+            <svg class="selo-melhor__anel" viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="seloArco" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0" /></defs>
+              <text><textPath href="#seloArco" textLength="272" lengthAdjust="spacingAndGlyphs">BLACK FRIDAY ★ UNICIVE ★ BLACK FRIDAY ★ UNICIVE ★ </textPath></text>
+            </svg>
+            <span class="selo-melhor__miolo">
+              <i>★★★</i>
+              <b>Melhor</b>
+              <b>oferta</b>
+              <small>da história</small>
+            </span>
+          </div>
 
-          <p class="oferta__cron-rot" data-fase-so="antes">A oferta começa em</p>
-          <p class="oferta__cron-rot" data-fase-so="ao-vivo" hidden>A oferta termina em</p>
+          <p class="oferta__cron-rot oferta__chamado" data-fase-so="ao-vivo"><span class="oferta__pulso" aria-hidden="true"></span><span data-chamado>Corra! Seu desconto de 85% acaba em:</span></p>
           <p class="oferta__cron-rot" data-fase-so="depois" hidden>Oferta encerrada em 20/11</p>
-          <div class="cdown cdown--oferta" id="cdownOferta" role="timer" aria-live="off" aria-label="Tempo restante da oferta">
+          <div class="cdown cdown--oferta" id="cdownOferta" role="timer" aria-live="off" aria-label="Tempo até a oferta finalizar">
             <div class="cdown__box"><b data-c="d">00</b><span>dias</span></div>
             <div class="cdown__box"><b data-c="h">00</b><span>horas</span></div>
             <div class="cdown__box"><b data-c="m">00</b><span>min</span></div>
@@ -162,7 +168,7 @@
             <span class="preco__rot">Matrícula</span>
             <span class="preco__de">de <s>R$ 399</s></span>
             <span class="preco__por"><small>por</small> <b>R$&nbsp;59,90</b></span>
-            <span class="preco__selo">-85%</span>
+            <span class="preco__selo" aria-label="85% de desconto"><i aria-hidden="true"></i><b>-85%</b><small>off</small></span>
           </div>
           <!-- mensalidade: só aparece quando CONFIG.mensalidade tiver valor -->
           <div class="preco preco--mensal " data-mensalidade hidden>
@@ -171,12 +177,11 @@
             <span class="preco__por"><small>por</small> <b data-mensalidade-valor>—</b></span>
           </div>
 
-          <a class="btn btn--gold btn--lg btn--block shine" data-checkout data-cta="hero" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>
+          <a class="btn btn--gold btn--lg btn--block shine" data-checkout data-cta="hero" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo">
           <span>Garantir minha matrícula</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <span class="btn btn--trava btn--lg btn--block" data-fase-so="antes" aria-disabled="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Oferta liberada em 09/11</span>
+
         </span>
         <span class="btn btn--trava btn--lg btn--block" data-fase-so="depois" hidden aria-disabled="true">
           <span>Oferta encerrada</span>
@@ -203,8 +208,8 @@
 <div class="fitas" aria-hidden="true">
   <div class="fita fita--ouro">
     <div class="fita__track">
-      <span>Black Friday Unicive</span><span>Matrícula R$ 59,90</span><span>De 09/11 a 20/11</span><span>Cursos tecnólogos EAD</span>
-      <span>Black Friday Unicive</span><span>Matrícula R$ 59,90</span><span>De 09/11 a 20/11</span><span>Cursos tecnólogos EAD</span>
+      <span>Última oferta possível</span><span>Matrícula R$ 59,90</span><span>Finaliza em 20/11</span><span>Melhor oferta possível</span>
+      <span>Última oferta possível</span><span>Matrícula R$ 59,90</span><span>Finaliza em 20/11</span><span>Melhor oferta possível</span>
     </div>
   </div>
   <div class="fita fita--prata">
@@ -257,12 +262,11 @@
       </article>
     </div>
     <div class="center" data-reveal>
-      <a class="btn btn--gold btn--lg shine" data-checkout data-cta="cursos" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>
+      <a class="btn btn--gold btn--lg shine" data-checkout data-cta="cursos" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo">
           <span>Escolher meu curso e me matricular</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <span class="btn btn--trava btn--lg" data-fase-so="antes" aria-disabled="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Oferta liberada em 09/11</span>
+
         </span>
         <span class="btn btn--trava btn--lg" data-fase-so="depois" hidden aria-disabled="true">
           <span>Oferta encerrada</span>
@@ -300,7 +304,7 @@
 <section class="section section--bomba" id="ancoragem" aria-labelledby="ancoragem-title">
   <div class="container">
     <div class="section__head" data-reveal>
-      <span class="eyebrow">Só na Black Friday</span>
+      <span class="eyebrow">A melhor oferta possível</span>
       <h2 class="section__title" id="ancoragem-title">De <s class="riscado">R$ 399</s> por <span class="gold">R$ 59,90</span></h2>
     </div>
 
@@ -311,28 +315,29 @@
       </div>
       <div class="ancora__seta" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       <div class="ancora__col ancora__col--por">
-        <span class="ancora__rot">Matrícula Black Friday</span>
+        <span class="ancora__rot">Melhor oferta possível</span>
         <span class="ancora__valor">R$ 59,90</span>
         <span class="ancora__economia">Você economiza R$ 339,10</span>
       </div>
     </div>
 
     <div class="bomba" data-reveal>
-      <p class="bomba__nota" data-fase-so="antes">A oferta começa em <b>09/11</b> e vai até <b>20/11, às 23h59</b>.</p>
-      <p class="bomba__nota" data-fase-so="ao-vivo" hidden>Termina em <b>20/11, às 23h59</b>. Depois disso, a matrícula volta para R$ 399.</p>
+      <div class="ultima" data-fase-so="ao-vivo">
+        <b class="ultima__titulo">Esta é a última oferta possível</b>
+        <span>Finaliza em <b>20/11, às 23h59</b>. Depois disso, a matrícula volta para <b>R$ 399</b>.</span>
+      </div>
       <p class="bomba__nota" data-fase-so="depois" hidden>A oferta terminou em 20/11, às 23h59.</p>
-      <div class="cdown cdown--big" id="cdownBig" role="timer" aria-live="off" aria-label="Tempo restante da oferta">
+      <div class="cdown cdown--big" id="cdownBig" role="timer" aria-live="off" aria-label="Tempo até a oferta finalizar">
             <div class="cdown__box"><b data-c="d">00</b><span>dias</span></div>
             <div class="cdown__box"><b data-c="h">00</b><span>horas</span></div>
             <div class="cdown__box"><b data-c="m">00</b><span>min</span></div>
             <div class="cdown__box"><b data-c="s">00</b><span>seg</span></div>
           </div>
-      <a class="btn btn--gold btn--lg shine" data-checkout data-cta="ancoragem" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>
+      <a class="btn btn--gold btn--lg shine" data-checkout data-cta="ancoragem" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo">
           <span>Garantir minha matrícula por R$ 59,90</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <span class="btn btn--trava btn--lg" data-fase-so="antes" aria-disabled="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Oferta liberada em 09/11</span>
+
         </span>
         <span class="btn btn--trava btn--lg" data-fase-so="depois" hidden aria-disabled="true">
           <span>Oferta encerrada</span>
@@ -400,10 +405,9 @@
 <div class="dock" id="dock">
   <div class="dock__info">
     <b>Matrícula R$ 59,90</b>
-    <span id="dockTempo">até 20/11 · 23h59</span>
+    <span id="dockTempo">finaliza 20/11 · 23h59</span>
   </div>
-  <a class="btn btn--gold" data-checkout data-cta="dock" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>Matricular</a>
-  <span class="btn btn--trava" data-fase-so="antes" aria-disabled="true">09/11</span>
+  <a class="btn btn--gold" data-checkout data-cta="dock" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo">Matricular</a>
 </div>
 
 <canvas class="brasas" id="brasas" aria-hidden="true"></canvas>

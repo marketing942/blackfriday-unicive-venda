@@ -1339,3 +1339,120 @@ html.fase-simbolo .parceiro-x i + i { animation-delay: 2.05s; }
   /* o botão principal cabe numa linha só */
   .oferta__card .btn--lg { font-size: .9rem; letter-spacing: .02em; white-space: nowrap; padding-inline: 1rem; }
 }
+
+/* =========================================================
+   GATILHOS DE URGÊNCIA — "última oferta possível", "melhor oferta possível"
+   ========================================================= */
+.topbar__gatilho { padding: .1rem .5rem; border-radius: 4px; background: #1b1400; color: var(--gold-hot); letter-spacing: .1em; }
+html.is-ultimas-horas .topbar__gatilho { animation: pisca 1s steps(1) infinite; }
+
+/* o cartão serve de referência para o selo do canto */
+.oferta__card { position: relative; }
+/* o cronômetro esquenta nas últimas horas */
+html.is-ultimas-horas .cdown__box::before { background: linear-gradient(90deg, transparent, #ff8a7a, transparent); }
+html.is-ultimas-horas .cdown__box b { background: linear-gradient(180deg, #fff, #ffc4b8 60%, #ff8a7a); -webkit-background-clip: text; background-clip: text; }
+
+/* faixa de "última oferta" na seção da ancoragem */
+.ultima {
+  display: flex; flex-direction: column; align-items: center; gap: .3rem; text-align: center;
+  padding: 1rem 1.4rem; border-radius: 14px; max-width: 620px;
+  border: 1px solid rgba(255, 138, 122, .45); background: rgba(255, 138, 122, .07);
+}
+.ultima__titulo { font-family: var(--display); font-weight: 900; font-size: 1.15rem; letter-spacing: .04em; text-transform: uppercase; color: #ffb0a2; }
+.ultima span { color: var(--muted); }
+.ultima span b { color: var(--text); }
+
+
+/* =========================================================
+   SELOS — "melhor oferta" no canto do cartão e "-85%" no preço
+   ========================================================= */
+
+/* chamado acima do cronômetro */
+.oferta__chamado {
+  display: flex; align-items: center; gap: .5rem; padding-right: 5.5rem;
+  color: var(--gold-hot); font-size: .82rem; letter-spacing: .08em;
+}
+.oferta__pulso { position: relative; flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--gold-hot); }
+.oferta__pulso::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit;
+  animation: pulso-onda 1.4s ease-out infinite;
+}
+@keyframes pulso-onda { from { transform: scale(1); opacity: .8; } to { transform: scale(3.2); opacity: 0; } }
+html.is-ultimas-horas .oferta__chamado { color: #ff8a7a; }
+html.is-ultimas-horas .oferta__pulso { background: #ff8a7a; }
+
+/* selo "melhor oferta" (roseta dourada com fitas) */
+.selo-melhor {
+  position: absolute; top: -1.6rem; right: -1.4rem; z-index: 6;
+  width: 112px; height: 112px;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .55));
+  animation: selo-entra .9s cubic-bezier(.2, 1.6, .4, 1) .6s both, selo-balanca 5s ease-in-out 1.5s infinite;
+  pointer-events: none;
+}
+.selo-melhor__fitas { position: absolute; left: 50%; top: 62%; width: 70%; transform: translateX(-50%); }
+.selo-melhor__fitas path { fill: #8a1f1f; stroke: #c8963a; stroke-width: 1.5; }
+.selo-melhor__anel {
+  position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 58%, rgba(0, 0, 0, .25) 59%, transparent 61%),
+    conic-gradient(from 0deg, #7a5208, #ffd99a, var(--gold-hot), #b07a12, #ffe7b0, #8a5d0c, #ffd99a, #7a5208);
+  clip-path: polygon(50.0% 0.0%, 55.6% 7.4%, 62.9% 1.7%, 66.5% 10.3%, 75.0% 6.7%, 76.2% 15.9%, 85.4% 14.6%, 84.1% 23.8%, 93.3% 25.0%, 89.7% 33.5%, 98.3% 37.1%, 92.6% 44.4%, 100.0% 50.0%, 92.6% 55.6%, 98.3% 62.9%, 89.7% 66.5%, 93.3% 75.0%, 84.1% 76.2%, 85.4% 85.4%, 76.2% 84.1%, 75.0% 93.3%, 66.5% 89.7%, 62.9% 98.3%, 55.6% 92.6%, 50.0% 100.0%, 44.4% 92.6%, 37.1% 98.3%, 33.5% 89.7%, 25.0% 93.3%, 23.8% 84.1%, 14.6% 85.4%, 15.9% 76.2%, 6.7% 75.0%, 10.3% 66.5%, 1.7% 62.9%, 7.4% 55.6%, 0.0% 50.0%, 7.4% 44.4%, 1.7% 37.1%, 10.3% 33.5%, 6.7% 25.0%, 15.9% 23.8%, 14.6% 14.6%, 23.8% 15.9%, 25.0% 6.7%, 33.5% 10.3%, 37.1% 1.7%, 44.4% 7.4%);
+  animation: gira 22s linear infinite;
+}
+.selo-melhor__anel text { font-family: var(--display); font-size: 8px; font-weight: 900; letter-spacing: .6px; fill: #2a1a00; }
+.selo-melhor__miolo {
+  position: absolute; inset: 20%; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: .95;
+  background: radial-gradient(circle at 35% 30%, #1f3d2e, #0b1a14 70%);
+  border: 2px solid #ffd99a; box-shadow: inset 0 0 0 2px #0b1a14, inset 0 0 0 3px rgba(255, 217, 154, .45);
+  color: var(--gold-hot); text-align: center; overflow: hidden;
+}
+.selo-melhor__miolo::after { /* brilho passando */
+  content: ""; position: absolute; inset: -20%;
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, .35) 50%, transparent 60%);
+  transform: translateX(-120%); animation: selo-brilho 4s ease-in-out 2s infinite;
+}
+.selo-melhor__miolo i { font-style: normal; font-size: .42rem; letter-spacing: .12em; color: #ffd99a; margin-bottom: .1rem; }
+.selo-melhor__miolo b { font-family: var(--display); font-weight: 900; font-size: .68rem; text-transform: uppercase; letter-spacing: .02em; }
+.selo-melhor__miolo small { margin-top: .14rem; font-size: .36rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #ffe7b0; }
+
+@keyframes gira { to { transform: rotate(360deg); } }
+@keyframes selo-entra { from { transform: scale(0) rotate(-40deg); opacity: 0; } to { transform: scale(1) rotate(8deg); opacity: 1; } }
+@keyframes selo-balanca { 0%, 100% { transform: rotate(8deg); } 50% { transform: rotate(-4deg) scale(1.04); } }
+@keyframes selo-brilho { 0%, 60% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+
+/* selo "-85%" (estrela serrilhada dourada) */
+.preco__selo {
+  position: relative; width: 78px; height: 78px; border-radius: 0; background: none; box-shadow: none;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: .9;
+  color: #2a1a00; transform: rotate(-12deg);
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, .5));
+  animation: selo85-pulsa 2.6s ease-in-out infinite;
+}
+.preco__selo i {
+  position: absolute; inset: 0; z-index: -1;
+  background: conic-gradient(from 20deg, #7a5208, #ffd99a, var(--gold-hot), #b07a12, #ffe7b0, #8a5d0c, #ffd99a, #7a5208);
+  clip-path: polygon(50.0% 0.0%, 55.6% 7.4%, 62.9% 1.7%, 66.5% 10.3%, 75.0% 6.7%, 76.2% 15.9%, 85.4% 14.6%, 84.1% 23.8%, 93.3% 25.0%, 89.7% 33.5%, 98.3% 37.1%, 92.6% 44.4%, 100.0% 50.0%, 92.6% 55.6%, 98.3% 62.9%, 89.7% 66.5%, 93.3% 75.0%, 84.1% 76.2%, 85.4% 85.4%, 76.2% 84.1%, 75.0% 93.3%, 66.5% 89.7%, 62.9% 98.3%, 55.6% 92.6%, 50.0% 100.0%, 44.4% 92.6%, 37.1% 98.3%, 33.5% 89.7%, 25.0% 93.3%, 23.8% 84.1%, 14.6% 85.4%, 15.9% 76.2%, 6.7% 75.0%, 10.3% 66.5%, 1.7% 62.9%, 7.4% 55.6%, 0.0% 50.0%, 7.4% 44.4%, 1.7% 37.1%, 10.3% 33.5%, 6.7% 25.0%, 15.9% 23.8%, 14.6% 14.6%, 23.8% 15.9%, 25.0% 6.7%, 33.5% 10.3%, 37.1% 1.7%, 44.4% 7.4%);
+  animation: gira 16s linear infinite;
+}
+.preco__selo i::after { /* aro interno */
+  content: ""; position: absolute; inset: 14%; border-radius: 50%;
+  border: 1.5px dashed rgba(42, 26, 0, .45);
+}
+.preco__selo b { position: relative; font-family: var(--display); font-weight: 900; font-size: 1.15rem; letter-spacing: -.03em; }
+.preco__selo small { position: relative; font-size: .62rem; font-weight: 900; letter-spacing: .2em; text-transform: uppercase; }
+@keyframes selo85-pulsa { 0%, 100% { transform: rotate(-12deg) scale(1); } 50% { transform: rotate(-12deg) scale(1.08); } }
+.preco { isolation: isolate; }
+
+@media (max-width: 700px) {
+  .selo-melhor { width: 92px; height: 92px; top: -1.3rem; right: -.5rem; }
+  .selo-melhor__miolo b { font-size: .56rem; }
+  .selo-melhor__miolo small, .selo-melhor__miolo i { font-size: .3rem; }
+  .oferta__chamado { padding-right: 4.6rem; font-size: .74rem; }
+  .preco__selo { width: 66px; height: 66px; }
+  .preco__selo b { font-size: .98rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .selo-melhor, .selo-melhor__anel, .selo-melhor__miolo::after, .preco__selo, .preco__selo i { animation: none; }
+  .selo-melhor { transform: rotate(8deg); }
+}
