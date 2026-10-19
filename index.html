@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <!-- Google Tag Manager
+       Precisa ser o primeiro script do <head> — é ele que carrega a PixelX. -->
+  <script>(function(w,d,s,l){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'?l='+l:'';j.async=true;j.src=
+  'https://sgtm.cppem.com.br/metrics/'+dl;f.parentNode.insertBefore(j,f);})
+  (window,document,'script','dataLayer');</script>
+  <!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Black Friday Unicive · Matrícula de R$ 399 por R$ 59,90</title>
+<meta name="description" content="Black Friday Unicive: matrícula de R$ 399 por R$ 59,90 nos cursos tecnólogos EAD reconhecidos pelo MEC, com nota máxima. Oferta de 09/11 até 20/11, às 23h59.">
+<meta name="theme-color" content="#04140f">
+
+<link rel="icon" href="assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/favicon-192.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Unicive">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Black Friday Unicive · Matrícula de R$ 399 por R$ 59,90">
+<meta property="og:description" content="Cursos tecnólogos EAD reconhecidos pelo MEC. Oferta válida de 09/11 até 20/11, às 23h59.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Lexend:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<!-- A ABERTURA decide ANTES do primeiro paint se vai tocar: decidir no
+     script.js (fim do <body>) faria o hero piscar pronto e depois sumir.
+     Toca uma vez por sessão. ?abertura=0 pula, ?abertura=1 força.
+     A trava dos 7s é a rede de segurança: se o script.js não carregar, a
+     página não pode ficar presa sem conteúdo. -->
+<script>
+  (function (d) {
+    var raiz = d.documentElement, qs = location.search, visto = false;
+    try { visto = sessionStorage.getItem("bf-unicive-venda-abertura") === "1"; } catch (e) {}
+    var calmo = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var tocar = /abertura=1/.test(qs) || (!visto && !calmo && !/abertura=0/.test(qs));
+    raiz.classList.add("js", tocar ? "is-abertura" : "is-pulado");
+    if (tocar) setTimeout(function () {
+      if (raiz.classList.contains("is-abertura") && !raiz.classList.contains("is-rodando")) {
+        raiz.classList.remove("is-abertura"); raiz.classList.add("is-pulado");
+      }
+    }, 7000);
+  })(document);
+</script>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://sgtm.cppem.com.br/ns.html?id=GTM-PJ379FLQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- ================= TOPBAR ================= -->
+<div class="topbar" role="note">
+  <span class="topbar__dot" aria-hidden="true"></span>
+  <span data-fase-so="antes">Black Friday Unicive · <b>começa em 09/11</b><span class="topbar__extra"> · matrícula por R$ 59,90</span></span>
+  <span data-fase-so="ao-vivo" hidden>Black Friday Unicive · <b>termina em <span data-tempo-curto>--</span></b><span class="topbar__extra"> · matrícula por R$ 59,90</span></span>
+  <span data-fase-so="depois" hidden>A Black Friday Unicive <b>foi encerrada</b></span>
+</div>
+
+<!-- =========================================================
+     HERO — página de VENDA
+     O objetivo é um só: levar ao checkout de matrícula. À direita, no
+     lugar do formulário da página de cadastro, fica o cartão da oferta:
+     cronômetro da duração, ancoragem de preço e o botão do checkout.
+     ========================================================= -->
+<section class="hero" id="topo">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__grao" aria-hidden="true"></div>
+  <canvas class="hero__vidro" id="vidro" aria-hidden="true"></canvas>
+  <canvas class="hero__fogo" id="fogo" aria-hidden="true"></canvas>
+  <canvas class="hero__raios" id="raios" aria-hidden="true"></canvas>
+  <div class="hero__clarao" id="clarao" aria-hidden="true"></div>
+
+  <div class="hero__stage">
+    <div class="container hero__grid">
+
+      <div class="leao marca-uni" id="bfMarca" aria-hidden="true">
+        <i class="leao__halo"></i>
+        <span class="bf__leao">
+          <svg class="simbolo" viewBox="0 0 941 1074">
+            <defs>
+              <linearGradient id="uni-ouro" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffe0a6"/>
+                <stop offset=".55" stop-color="#ffc572"/>
+                <stop offset="1" stop-color="#e3a11b"/>
+              </linearGradient>
+              <linearGradient id="uni-verde" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1fb388"/>
+                <stop offset=".55" stop-color="#0a7d5f"/>
+                <stop offset="1" stop-color="#02664f"/>
+              </linearGradient>
+            </defs>
+            <path class="peca peca--a" fill="url(#uni-ouro)" d="M0 133 H399 V455 A80 80 0 0 1 319 535 H0 Z"/>
+            <path class="peca peca--b" fill="url(#uni-ouro)" d="M0 675 H319 A80 80 0 0 1 399 755 V1074 A399 399 0 0 1 0 675 Z"/>
+            <path class="peca peca--folha" fill="url(#uni-verde)" d="M941 0 V540 A399 399 0 0 1 542 940 V400 A399 399 0 0 1 941 0 Z"/>
+          </svg>
+        </span>
+        <!-- Unicive × CPPEM: o leão chega do outro lado e o "×" se desenha no meio -->
+        <span class="parceiro-x"><i></i><i></i></span>
+        <span class="leao-cppem"><img src="assets/leao-cppem-ouro.webp" alt="" width="399" height="450"></span>
+        <!-- parceria: "unicive" e CPPEM chegam de lados opostos e se
+             encontram no fio dourado do meio -->
+        <span class="parceria">
+          <img class="parceria__uni" src="assets/unicive-nome.webp" alt="" width="900" height="124">
+          <i class="parceria__fio"></i>
+          <img class="parceria__cppem" src="assets/cppem-ouro.webp" alt="" width="700" height="233">
+        </span>
+      </div>
+
+      <!-- ---------- coluna do título ---------- -->
+      <div class="hero__cena">
+        <span class="alerta anim d1">
+          <i class="alerta__ponto" aria-hidden="true"></i>
+          <b data-fase-so="antes">Começa em 09/11</b>
+          <b data-fase-so="ao-vivo" hidden>Oferta no ar</b>
+          <b data-fase-so="depois" hidden>Oferta encerrada</b>
+          <i class="alerta__sep" aria-hidden="true"></i>
+          <span>Até 20/11 · 23h59</span>
+        </span>
+
+        <!-- cada letra é um <i> com --i (ordem de entrada) -->
+        <h1 class="bf" aria-label="Black Friday Unicive">
+          <span class="bf__black" id="bfBlack" aria-hidden="true"><span class="bf__in"><i style="--i:0">B</i><i style="--i:1">L</i><i style="--i:2">A</i><i style="--i:3">C</i><i style="--i:4">K</i></span></span>
+          <span class="bf__friday" id="bfFriday" aria-hidden="true"><span class="bf__in"><i style="--i:0">F</i><i style="--i:1">R</i><i style="--i:2">I</i><i style="--i:3">D</i><i style="--i:4">A</i><i style="--i:5">Y</i></span></span>
+        </h1>
+
+        <p class="bf__assina anim d1">Unicive <i></i> CPPEM</p>
+
+        <p class="hero__sub anim d2">
+          <mark>Matrícula de R$ 399 por R$ 59,90</mark> nos cursos tecnólogos
+          <em>reconhecidos pelo MEC</em>. Só até 20/11.
+        </p>
+      </div>
+
+      <!-- ---------- coluna da oferta ---------- -->
+      <div class="inscricao oferta anim d3" id="oferta">
+        <div class="inscricao__card oferta__card">
+          <span class="oferta__tag">Oferta Black Friday</span>
+
+          <p class="oferta__cron-rot" data-fase-so="antes">A oferta começa em</p>
+          <p class="oferta__cron-rot" data-fase-so="ao-vivo" hidden>A oferta termina em</p>
+          <p class="oferta__cron-rot" data-fase-so="depois" hidden>Oferta encerrada em 20/11</p>
+          <div class="cdown cdown--oferta" id="cdownOferta" role="timer" aria-live="off" aria-label="Tempo restante da oferta">
+            <div class="cdown__box"><b data-c="d">00</b><span>dias</span></div>
+            <div class="cdown__box"><b data-c="h">00</b><span>horas</span></div>
+            <div class="cdown__box"><b data-c="m">00</b><span>min</span></div>
+            <div class="cdown__box"><b data-c="s">00</b><span>seg</span></div>
+          </div>
+
+          <div class="preco ">
+            <span class="preco__rot">Matrícula</span>
+            <span class="preco__de">de <s>R$ 399</s></span>
+            <span class="preco__por"><small>por</small> <b>R$&nbsp;59,90</b></span>
+            <span class="preco__selo">-85%</span>
+          </div>
+          <!-- mensalidade: só aparece quando CONFIG.mensalidade tiver valor -->
+          <div class="preco preco--mensal " data-mensalidade hidden>
+            <span class="preco__rot">Mensalidade</span>
+            <span class="preco__de">de <s>R$ 250</s></span>
+            <span class="preco__por"><small>por</small> <b data-mensalidade-valor>—</b></span>
+          </div>
+
+          <a class="btn btn--gold btn--lg btn--block shine" data-checkout data-cta="hero" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>
+          <span>Garantir minha matrícula</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <span class="btn btn--trava btn--lg btn--block" data-fase-so="antes" aria-disabled="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Oferta liberada em 09/11</span>
+        </span>
+        <span class="btn btn--trava btn--lg btn--block" data-fase-so="depois" hidden aria-disabled="true">
+          <span>Oferta encerrada</span>
+        </span>
+
+          <ul class="oferta__garantias">
+            <li>Graduação EAD reconhecida pelo MEC</li>
+            <li>Nota máxima no MEC</li>
+            <li>Pagamento seguro no checkout</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button type="button" class="hero__pular" id="pular" tabindex="-1">
+    Pular
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </button>
+</section>
+
+<!-- ================= FAIXAS ================= -->
+<div class="fitas" aria-hidden="true">
+  <div class="fita fita--ouro">
+    <div class="fita__track">
+      <span>Black Friday Unicive</span><span>Matrícula R$ 59,90</span><span>De 09/11 a 20/11</span><span>Cursos tecnólogos EAD</span>
+      <span>Black Friday Unicive</span><span>Matrícula R$ 59,90</span><span>De 09/11 a 20/11</span><span>Cursos tecnólogos EAD</span>
+    </div>
+  </div>
+  <div class="fita fita--prata">
+    <div class="fita__track fita__track--rev">
+      <span>Nota máxima no MEC</span><span>Diploma válido em todo o Brasil</span><span>Feita para concurseiros</span><span>Unicive × CPPEM</span>
+      <span>Nota máxima no MEC</span><span>Diploma válido em todo o Brasil</span><span>Feita para concurseiros</span><span>Unicive × CPPEM</span>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= CURSOS DA OFERTA ================= -->
+<section class="section" id="cursos" aria-labelledby="cursos-title">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Cursos tecnólogos válidos nesta oferta</span>
+      <h2 class="section__title" id="cursos-title">Cinco cursos, <span class="gold">uma matrícula de R$ 59,90</span></h2>
+    </div>
+    <div class="cursos cursos--5">
+      <article class="curso" data-reveal>
+        <span class="curso__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M4 10h16L12 4z"/></svg></span>
+        <span class="curso__tipo">Tecnólogo EAD</span>
+        <h3>Serviços Jurídicos</h3>
+        <span class="curso__ok">✓ Válido na oferta</span>
+      </article>
+      <article class="curso" data-reveal>
+        <span class="curso__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 7.6 7 9 4-1.4 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <span class="curso__tipo">Tecnólogo EAD</span>
+        <h3>Segurança Privada</h3>
+        <span class="curso__ok">✓ Válido na oferta</span>
+      </article>
+      <article class="curso" data-reveal>
+        <span class="curso__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 20v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1"/><circle cx="9.5" cy="8" r="3.5"/><path d="M18 14a4 4 0 0 1 3 3.9V19M17 5.2a3.5 3.5 0 0 1 0 6.6"/></svg></span>
+        <span class="curso__tipo">Tecnólogo EAD</span>
+        <h3>Gestão de Recursos Humanos</h3>
+        <span class="curso__ok">✓ Válido na oferta</span>
+      </article>
+      <article class="curso" data-reveal>
+        <span class="curso__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M21 21l-5.2-5.2"/><path d="M10.5 7.5v3l2 1.2"/></svg></span>
+        <span class="curso__tipo">Tecnólogo EAD</span>
+        <h3>Criminologia</h3>
+        <span class="curso__ok">✓ Válido na oferta</span>
+      </article>
+      <article class="curso curso--servidor" data-reveal>
+        <span class="curso__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 7.6 7 9 4-1.4 7-4.5 7-9V6z"/><path d="m12 8 1.1 2.3 2.5.3-1.8 1.7.4 2.5L12 13.9l-2.2 1.2.4-2.5-1.8-1.7 2.5-.3z"/></svg></span>
+        <span class="curso__tipo">Tecnólogo EAD</span>
+        <h3>Segurança Pública</h3>
+        <span class="curso__aviso">Exclusivo para servidores públicos</span>
+      </article>
+    </div>
+    <div class="center" data-reveal>
+      <a class="btn btn--gold btn--lg shine" data-checkout data-cta="cursos" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>
+          <span>Escolher meu curso e me matricular</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <span class="btn btn--trava btn--lg" data-fase-so="antes" aria-disabled="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Oferta liberada em 09/11</span>
+        </span>
+        <span class="btn btn--trava btn--lg" data-fase-so="depois" hidden aria-disabled="true">
+          <span>Oferta encerrada</span>
+        </span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEC =================
+     Os fatos que sustentam a oferta: reconhecimento, nota e validade.
+     Mesmas afirmações da página de captura da Unicive. -->
+<section class="section mec" id="mec" aria-labelledby="mec-title">
+  <div class="container mec__grid">
+    <a class="mec__selo" data-reveal href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhes-ies/d96957f455f6405d14c6542552b0f6eb/MzY0OQ==" target="_blank" rel="noopener noreferrer" aria-label="Nota máxima 5 no MEC — consultar no e-MEC">
+      <img src="assets/nota-maxima.webp" alt="Nota máxima 5 no MEC" width="882" height="485" loading="lazy" decoding="async">
+      <span class="mec__consulta">Consultar no e-MEC ↗</span>
+      <!-- carimbo: bate sobre o selo quando a seção entra na tela -->
+      <span class="carimbo-mec" aria-hidden="true"><small>Avaliação</small><b>Nota 5</b><small>MEC</small></span>
+    </a>
+    <div data-reveal>
+      <span class="eyebrow">Por que a Unicive</span>
+      <h2 class="section__title section__title--left" id="mec-title">Um diploma que <span class="gold">vale no Brasil inteiro</span></h2>
+      <ul class="mec__lista">
+        <li><b>Reconhecida pelo MEC</b><span>Instituição certificada, com o diploma válido em todo o território nacional.</span></li>
+        <li><b>Nota máxima</b><span>Avaliação 5 no MEC — a segurança de estudar numa instituição séria.</span></li>
+        <li><b>Feita para concurso</b><span>Serve para concursos de nível superior, provas de títulos e para o mercado.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= A OFERTA (ancoragem) =================
+     Repete o preço com a comparação lado a lado e o cronômetro: é o
+     último empurrão antes do checkout. -->
+<section class="section section--bomba" id="ancoragem" aria-labelledby="ancoragem-title">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Só na Black Friday</span>
+      <h2 class="section__title" id="ancoragem-title">De <s class="riscado">R$ 399</s> por <span class="gold">R$ 59,90</span></h2>
+    </div>
+
+    <div class="ancora" data-reveal>
+      <div class="ancora__col ancora__col--de">
+        <span class="ancora__rot">Matrícula normal</span>
+        <span class="ancora__valor"><s>R$ 399</s></span>
+      </div>
+      <div class="ancora__seta" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="ancora__col ancora__col--por">
+        <span class="ancora__rot">Matrícula Black Friday</span>
+        <span class="ancora__valor">R$ 59,90</span>
+        <span class="ancora__economia">Você economiza R$ 339,10</span>
+      </div>
+    </div>
+
+    <div class="bomba" data-reveal>
+      <p class="bomba__nota" data-fase-so="antes">A oferta começa em <b>09/11</b> e vai até <b>20/11, às 23h59</b>.</p>
+      <p class="bomba__nota" data-fase-so="ao-vivo" hidden>Termina em <b>20/11, às 23h59</b>. Depois disso, a matrícula volta para R$ 399.</p>
+      <p class="bomba__nota" data-fase-so="depois" hidden>A oferta terminou em 20/11, às 23h59.</p>
+      <div class="cdown cdown--big" id="cdownBig" role="timer" aria-live="off" aria-label="Tempo restante da oferta">
+            <div class="cdown__box"><b data-c="d">00</b><span>dias</span></div>
+            <div class="cdown__box"><b data-c="h">00</b><span>horas</span></div>
+            <div class="cdown__box"><b data-c="m">00</b><span>min</span></div>
+            <div class="cdown__box"><b data-c="s">00</b><span>seg</span></div>
+          </div>
+      <a class="btn btn--gold btn--lg shine" data-checkout data-cta="ancoragem" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>
+          <span>Garantir minha matrícula por R$ 59,90</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <span class="btn btn--trava btn--lg" data-fase-so="antes" aria-disabled="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Oferta liberada em 09/11</span>
+        </span>
+        <span class="btn btn--trava btn--lg" data-fase-so="depois" hidden aria-disabled="true">
+          <span>Oferta encerrada</span>
+        </span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MURAL DE FORMATURA =================
+     Fotos reais de formados, em polaroides que caem no mural uma a uma
+     (--d = ordem) e ficam presas pela fita, cada uma com inclinação (--r). -->
+<section class="section section--alt mural" id="formados" aria-labelledby="formados-title">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Mural de formatura</span>
+      <h2 class="section__title" id="formados-title">Eles já estão com o <span class="gold">diploma na mão</span></h2>
+    </div>
+  </div>
+  <!-- as fotos caem uma a uma quando a seção aparece e ficam presas pela fita -->
+  <div class="container">
+    <ul class="mural__quadro" role="list" data-reveal>
+      <li class="polaroide" style="--r:-3.2deg;--y:-8px;--d:0"><img src="assets/formados/formado-01.webp" width="640" height="427" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Diploma na mão!</span></li>
+      <li class="polaroide" style="--r:-1.2deg;--y:-7px;--d:1"><img src="assets/formados/formado-02.webp" width="480" height="640" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Turma Unicive</span></li>
+      <li class="polaroide" style="--r:-5.2deg;--y:-2px;--d:2"><img src="assets/formados/formado-04.webp" width="427" height="640" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Nível superior ✓</span></li>
+      <li class="polaroide" style="--r:5.0deg;--y:6px;--d:3"><img src="assets/formados/formado-03.webp" width="640" height="427" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Formado com orgulho</span></li>
+      <li class="polaroide" style="--r:3.2deg;--y:-6px;--d:4"><img src="assets/formados/formado-06.webp" width="359" height="640" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Turma Unicive</span></li>
+      <li class="polaroide" style="--r:0.4deg;--y:-4px;--d:5"><img src="assets/formados/formado-05.webp" width="427" height="640" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Agora é oficial!</span></li>
+      <li class="polaroide" style="--r:-3.9deg;--y:-8px;--d:6"><img src="assets/formados/formado-08.webp" width="426" height="640" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Diploma na mão!</span></li>
+      <li class="polaroide" style="--r:-3.4deg;--y:9px;--d:7"><img src="assets/formados/formado-07.webp" width="359" height="640" loading="lazy" decoding="async" alt="Formado(a) da Unicive com o diploma"><span class="polaroide__legenda">Formada com orgulho</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= RODAPÉ ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__marca footer__marca--uni">
+          <img src="assets/unicive-nome.webp" alt="Unicive" width="900" height="124" loading="lazy">
+        </div>
+        <p class="footer__quote">Graduação EAD reconhecida pelo MEC, com nota máxima, válida em todo o Brasil.</p>
+      </div>
+
+      <div class="footer__social">
+        <a href="https://www.instagram.com/unicive.caruaru/" target="_blank" rel="noopener" aria-label="Instagram da Unicive Caruaru">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9s.7.8.9 1.4c.1.4.3 1 .4 2.2 0 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4s-.8.7-1.4.9c-.4.1-1 .3-2.2.4-1.3 0-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4a3.8 3.8 0 0 1-1.4-.9 3.8 3.8 0 0 1-.9-1.4c-.1-.4-.3-1-.4-2.2 0-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4s.8-.7 1.4-.9c.4-.1 1-.3 2.2-.4 1.3 0 1.7-.1 4.9-.1zM12 0C8.7 0 8.3 0 7 .1 5.7.1 4.8.3 4.1.6c-.8.3-1.4.7-2 1.4-.7.6-1.1 1.2-1.4 2C.3 4.7.1 5.6.1 6.9 0 8.2 0 8.6 0 12s0 3.8.1 5.1c0 1.3.2 2.2.5 2.9.3.8.7 1.4 1.4 2 .6.7 1.2 1.1 2 1.4.7.3 1.6.5 2.9.5 1.3.1 1.7.1 5.1.1s3.8 0 5.1-.1c1.3 0 2.2-.2 2.9-.5.8-.3 1.4-.7 2-1.4.7-.6 1.1-1.2 1.4-2 .3-.7.5-1.6.5-2.9.1-1.3.1-1.7.1-5.1s0-3.8-.1-5.1c0-1.3-.2-2.2-.5-2.9-.3-.8-.7-1.4-1.4-2-.6-.7-1.2-1.1-2-1.4-.7-.3-1.6-.5-2.9-.5C15.8 0 15.4 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.4a1.4 1.4 0 1 1-2.9 0 1.4 1.4 0 0 1 2.9 0z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@cppemconcursos" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.5.5-5.5s0-3.6-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <span>© <span id="year">2026</span> <strong>Cppem Colégio e Cursos LTDA.</strong> · Caruaru, Pernambuco · CNPJ 57.347.872/0001-48</span>
+      <a href="https://cppem.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BARRA FIXA (MOBILE) ================= -->
+<div class="dock" id="dock">
+  <div class="dock__info">
+    <b>Matrícula R$ 59,90</b>
+    <span id="dockTempo">até 20/11 · 23h59</span>
+  </div>
+  <a class="btn btn--gold" data-checkout data-cta="dock" href="#" target="_blank" rel="noopener" data-fase-so="ao-vivo" hidden>Matricular</a>
+  <span class="btn btn--trava" data-fase-so="antes" aria-disabled="true">09/11</span>
+</div>
+
+<canvas class="brasas" id="brasas" aria-hidden="true"></canvas>
+<div class="capelos" id="capelos" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
