@@ -1477,3 +1477,72 @@ html.is-ultimas-horas .oferta__pulso { background: #ff8a7a; }
 }
 .mensal__nota svg { flex: none; width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 @media (prefers-reduced-motion: reduce) { .preco--mensal.is-segredo .preco__por b { animation: none; } }
+
+/* =========================================================
+   RODAPÉ — chamada final, marcas, cursos, navegação e redes
+   ========================================================= */
+.footer { position: relative; padding-top: 0; }
+.footer::before { /* fio dourado no topo */
+  content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-hot), transparent);
+}
+.footer__cta {
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+  margin: -2.2rem 0 3rem; padding: 1.4rem 1.8rem; border-radius: 20px;
+  border: 1px solid rgba(255, 197, 114, .45);
+  background: radial-gradient(120% 160% at 0% 0%, rgba(255, 197, 114, .16), transparent 55%), linear-gradient(160deg, #0f2a1f, #06140f);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .55);
+}
+.footer__cta-texto { display: flex; flex-direction: column; gap: .3rem; }
+.footer__cta-rot { font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-hot); font-variant-numeric: tabular-nums; }
+.footer__cta strong { font-family: var(--display); font-weight: 900; font-size: clamp(1.3rem, 2.4vw, 1.9rem); color: var(--text); line-height: 1.1; }
+.footer__cta strong s { color: var(--muted); text-decoration-color: #d99a9a; font-weight: 700; }
+.footer__cta strong em { font-style: normal; background: linear-gradient(180deg, #fff3cf, var(--gold-hot) 55%, var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.footer__cta .btn { flex: none; }
+
+.footer__grade { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.1fr; gap: 2.2rem; }
+.footer__marcas { display: flex; align-items: center; gap: .9rem; }
+.footer__marcas img { width: 140px; height: auto; }
+.footer__marcas .footer__leao { width: 46px; }
+.footer__marcas i { font-style: normal; color: var(--gold-hot); font-size: 1.2rem; }
+.footer__quote { max-width: 34ch; line-height: 1.55; }
+.footer__selos { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+.footer__selos li {
+  padding: .25rem .6rem; border-radius: 999px; border: 1px solid rgba(255, 197, 114, .35);
+  color: var(--gold-hot); font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+}
+.footer__col h3 { margin-bottom: .9rem; font-size: .72rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--text); }
+.footer__col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+.footer__col a { color: var(--muted); transition: color .2s; }
+.footer__col a:hover { color: var(--gold-hot); }
+.footer__col small { display: block; font-size: .68rem; opacity: .7; }
+.footer__redes { display: flex; flex-direction: column; gap: .55rem; }
+.footer__rede { display: inline-flex; align-items: center; gap: .6rem; }
+.footer__rede svg { width: 30px; height: 30px; padding: 7px; border-radius: 50%; fill: var(--silver); border: 1px solid var(--line-2); transition: background .2s, border-color .2s; }
+.footer__rede:hover svg { background: var(--gold-soft); border-color: var(--gold-deep); fill: var(--gold-hot); }
+.footer__seguro { display: flex; align-items: center; gap: .45rem; margin-top: 1.2rem; font-size: .78rem; }
+.footer__seguro svg { width: 16px; height: 16px; fill: none; stroke: var(--gold-hot); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.footer__bar { margin-top: 2.4rem; }
+
+@media (max-width: 1000px) {
+  .footer__grade { grid-template-columns: 1fr 1fr; }
+  .footer__brand { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .footer__cta { flex-direction: column; align-items: stretch; text-align: center; margin: -1.6rem 0 2.2rem; padding: 1.2rem; }
+  .footer__cta .btn { width: 100%; }
+  .footer__grade { gap: 1.8rem 1.2rem; }
+  .footer__col:last-child { grid-column: 1 / -1; }
+  .footer__redes { flex-direction: row; flex-wrap: wrap; gap: .8rem 1.2rem; }
+}
+.footer__col a, .footer__rede, .footer__bar a { text-decoration: none; }
+.footer__col a:hover, .footer__bar a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.footer__cta strong em, .footer__cta strong s { white-space: nowrap; }
+@media (max-width: 700px) {
+  .footer__cta-rot { font-size: .64rem; letter-spacing: .1em; }
+  .footer__cta strong { font-size: 1.25rem; }
+  .footer__cta .btn { font-size: .9rem; white-space: nowrap; padding-inline: 1rem; }
+  .footer__quote { font-size: .82rem; }
+  .footer__col h3 { font-size: .66rem; }
+  .footer__col a { font-size: .85rem; }
+}
