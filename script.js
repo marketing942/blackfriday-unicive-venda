@@ -146,7 +146,7 @@
     }
     botoes.forEach(function (a) {
       a.addEventListener("click", function () {
-        track("clique_checkout", { cta: a.getAttribute("data-cta") || "", valor: 59.90 });
+        track("clique_checkout", { cta: a.getAttribute("data-cta") || "", valor: 69.90 });
       });
     });
 
@@ -239,7 +239,7 @@
     if (ultimas !== raiz.classList.contains("is-ultimas-horas")) {
       raiz.classList.toggle("is-ultimas-horas", ultimas);
       $$("[data-gatilho]").forEach(function (el) { el.textContent = ultimas ? "Últimas horas" : "Última oferta possível"; });
-      $$("[data-chamado]").forEach(function (el) { el.textContent = ultimas ? "Últimas horas! Garanta antes que acabe:" : "Corra! Seu desconto de 85% acaba em:"; });
+      $$("[data-chamado]").forEach(function (el) { el.textContent = ultimas ? "Últimas horas! Garanta antes que acabe:" : "Corra! Seu desconto de 82% acaba em:"; });
     }
 
     var s = Math.floor(falta / 1000);

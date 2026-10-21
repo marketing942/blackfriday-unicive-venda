@@ -5,7 +5,7 @@ Página de venda da Black Friday da **Unicive**: leva o visitante direto ao **ch
 
 | | |
 |---|---|
-| **Oferta** | Matrícula de ~~R$ 399~~ por **R$ 59,90** |
+| **Oferta** | Matrícula de ~~R$ 399~~ por **R$ 69,90** |
 | **Mensalidade** | de R$ 250 por *(a definir — tabela oficial)* |
 | **Duração** | 09/11 (00h00) até 20/11, 23h59 |
 | **Cursos** | Serviços Jurídicos · Segurança Privada · Gestão de RH · Criminologia · Segurança Pública (só servidores públicos) |

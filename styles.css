@@ -1,5 +1,5 @@
 /* =========================================================
-   UNICIVE · BLACK FRIDAY — página de VENDA (matrícula R$ 59,90, 09/11 a 20/11)
+   UNICIVE · BLACK FRIDAY — página de VENDA (matrícula R$ 69,90, 09/11 a 20/11)
    hero (abertura + lista VIP) > fitas > prova (bilhetes)
    > lacrados > pavio > rodapé
 
@@ -1364,7 +1364,7 @@ html.is-ultimas-horas .cdown__box b { background: linear-gradient(180deg, #fff, 
 
 
 /* =========================================================
-   SELOS — "melhor oferta" no canto do cartão e "-85%" no preço
+   SELOS — "melhor oferta" no canto do cartão e "-82%" no preço
    ========================================================= */
 
 /* chamado acima do cronômetro */
@@ -1421,7 +1421,7 @@ html.is-ultimas-horas .oferta__pulso { background: #ff8a7a; }
 @keyframes selo-balanca { 0%, 100% { transform: rotate(8deg); } 50% { transform: rotate(-4deg) scale(1.04); } }
 @keyframes selo-brilho { 0%, 60% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
 
-/* selo "-85%" (estrela serrilhada dourada) */
+/* selo "-82%" (estrela serrilhada dourada) */
 .preco__selo {
   position: relative; width: 78px; height: 78px; border-radius: 0; background: none; box-shadow: none;
   display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: .9;
